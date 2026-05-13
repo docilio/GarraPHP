@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="banner.png" alt="GarraPHP Banner" width="100%">
+</p>
+
 # 爪 GarraPHP
 
 **Scrappy. Strong. Agentic.**
