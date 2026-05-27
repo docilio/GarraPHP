@@ -1,0 +1,30 @@
+# Block direct access to all PHP files by default
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
+
+# Whitelist only the public entry points
+<Files "index.php">     
+    Require all granted 
+</Files>
+
+<Files "ui.php">
+    Require all granted 
+</Files>
+<Files "cron.php">      
+    Require all granted 
+</Files>
+<Files "dashboard.php"> 
+    Require all granted 
+    </Files>
+<Files "setup.php">     
+    Require all granted 
+</Files>
+
+# No directory listings (prevents seeing file list if index.php is missing)
+Options -Indexes
+
+# Block hidden files (.env, .git, etc)
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
